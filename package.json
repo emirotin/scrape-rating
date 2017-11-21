@@ -1,0 +1,25 @@
+{
+  "name": "scrape-rating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:reset": "mkdir -p db && rimraf db/* && npm run db:migrate",
+    "db:migrate": "knex migrate:latest",
+    "start": "npm run db:reset && node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "cheerio": "^1.0.0-rc.2",
+    "iconv": "^2.3.0",
+    "knex": "^0.14.1",
+    "lodash": "^4.17.4",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "rimraf": "^2.6.2",
+    "sqlite3": "^3.1.13"
+  }
+}
